@@ -1,0 +1,10 @@
+<app-nav></app-nav>
+<!--<mat-card class="contenedor" *ngIf="empleado$ | async as empleado">-->
+<mat-card class="contenedor" *ngIf="empleado != null">
+    <mat-card-title>
+        <p>{{ empleado.nombre1 + ' ' + empleado.apellido1}} </p>
+    </mat-card-title>
+    <mat-card-subtitle>
+        <p>{{ empleado | json }} </p>
+    </mat-card-subtitle>
+</mat-card>

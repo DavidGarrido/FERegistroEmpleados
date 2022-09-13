@@ -1,0 +1,44 @@
+<app-nav></app-nav>
+<form [formGroup]="form" (ngSubmit)="agregarEmpleado()">
+    <mat-grid-list cols="2" rowHeight="80px">
+        <mat-grid-tile>
+            <mat-form-field appearance="outline">
+                <mat-label>Primer nombre:</mat-label>
+                <input formControlName="nombre1" matInput autofocus>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field appearance="outline">
+                <mat-label>Segundo nombre:</mat-label>
+                <input formControlName="nombre2" matInput>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field appearance="outline">
+                <mat-label>Primer apellido:</mat-label>
+                <input formControlName="apellido1" matInput>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field appearance="outline">
+                <mat-label>Segundo apellido:</mat-label>
+                <input formControlName="apellido2" matInput>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field appearance="outline">
+                <mat-label>Salario:</mat-label>
+                <input type="number" formControlName="salario" matInput>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field appearance="outline">
+                <mat-label>Cargo:</mat-label>
+                <input type="text" formControlName="cargo" matInput>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2">
+            <button [disabled]="form.invalid" type="submit" mat-raised-button color="accent">Agregar</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</form>
